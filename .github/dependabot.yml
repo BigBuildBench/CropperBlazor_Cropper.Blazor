@@ -1,0 +1,36 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/src/Cropper.Blazor"
+    target-branch: "dev"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 100
+    groups:
+      dotnet:
+        patterns:
+          - "*"
+    reviewers:
+      - MaxymGorn
+      - ColdForeign
+    assignees:
+      - MaxymGorn
+      - ColdForeign
+
+
+  - package-ecosystem: github-actions
+    directory: "/.github"
+    target-branch: "dev"
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 100
+    groups:
+      actions:
+        patterns:
+          - "*"
+    reviewers:
+      - MaxymGorn
+      - ColdForeign
+    assignees:
+      - MaxymGorn
+      - ColdForeign
